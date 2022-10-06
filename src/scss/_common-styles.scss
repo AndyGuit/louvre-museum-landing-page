@@ -13,13 +13,3 @@ body {
 ul {
   list-style: none;
 }
-
-a {
-  cursor: pointer;
-  transition: background 0.2s, color 0.2s;
-}
-
-a:hover,
-a:active {
-  color: $secondary-color;
-}
