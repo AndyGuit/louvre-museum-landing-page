@@ -49,3 +49,13 @@ a:active {
     }
   }
 }
+
+@media (max-width: 1024px) {
+  .link {
+    &--discover {
+      max-width: 300px;
+      font-size: $font-size5;
+      padding: 25px 50px;
+    }
+  }
+}

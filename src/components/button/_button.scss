@@ -56,3 +56,19 @@ button:active {
     color: #fff;
   }
 }
+
+@media (max-width: 768px) {
+  .button {
+    &--book {
+      font-size: $font-size5;
+    }
+  }
+}
+
+@media (max-width: 420px) {
+  .button {
+    &--buy-now {
+      font-size: $font-size5;
+    }
+  }
+}
