@@ -1,0 +1,58 @@
+button {
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  border: none;
+}
+
+button:hover,
+button:active {
+  background-color: $secondary-color;
+}
+
+.button {
+  width: 100%;
+
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.17em;
+  letter-spacing: 2px;
+
+  &--buy-now {
+    max-width: 175px;
+    height: 50px;
+    border-radius: 2px;
+    background-color: $primary-bgc;
+
+    color: #fff;
+    font-weight: 300;
+    font-size: $font-size4;
+  }
+
+  &--calc-amount {
+    max-width: 50px;
+    height: 50px;
+    background-color: #fff;
+
+    font-size: $font-size2;
+    font-weight: 400;
+    color: $primary-bgc;
+  }
+
+  &--calc-ticket {
+    max-width: 35px;
+    height: 25px;
+    background-color: $primary-bgc;
+
+    color: #fff;
+    font-size: $font-size4;
+  }
+
+  &--book {
+    max-width: 220px;
+    height: 45px;
+    background-color: $primary-color;
+
+    font-size: $font-size4;
+    font-weight: 400;
+    color: #fff;
+  }
+}
