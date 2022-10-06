@@ -1,0 +1,16 @@
+.section-header {
+  font-family: 'Forum';
+  font-weight: 400;
+  font-size: $font-size1;
+  line-height: 1.125em;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+
+  &--white {
+    color: #fff;
+  }
+
+  &--gold {
+    color: $secondary-color;
+  }
+}
