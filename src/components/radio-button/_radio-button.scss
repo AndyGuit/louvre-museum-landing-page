@@ -1,0 +1,18 @@
+.radio-button {
+  font-family: 'Roboto';
+  font-size: $font-size4;
+  font-weight: 300;
+  line-height: 1.18em;
+
+  cursor: pointer;
+
+  &__input {
+    width: 17px;
+    height: 17px;
+    margin-right: 17px;
+
+    accent-color: #000;
+
+    cursor: pointer;
+  }
+}

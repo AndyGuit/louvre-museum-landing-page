@@ -14,7 +14,13 @@
     <!-- @@include('components/link/_link-social.html', {className: 'link--social',
     href: 'https://www.youtube.com/user/louvre', imgSrc:
     './img/icons/icons.svg#youtube'}) -->
-    @@include('./components/logo/_logo.html', {text: 'louvre', imgSrc:
-    './img/icons/icons.svg#site-logo'})
+    <!-- @@include('./components/logo/_logo.html', {text: 'louvre', imgSrc:
+    './img/icons/icons.svg#site-logo'}) -->
+    @@include('./components/radio-button/_radio-button.html', {ticketType:
+    'permanent-exhibition', text: 'Permanent exhibition', checked: 'checked'})
+    @@include('./components/radio-button/_radio-button.html', {ticketType:
+    'temprorary-exhibition', text: 'Temporary exhibition'})
+    @@include('./components/radio-button/_radio-button.html', {ticketType:
+    'combined-admission', text: 'Combined Admission'})
   </body>
 </html>
