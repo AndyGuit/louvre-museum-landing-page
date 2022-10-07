@@ -1,0 +1,36 @@
+.input-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+  height: 45px;
+  border: 1px solid $primary-bgc;
+
+  input {
+    border: none;
+    outline: none;
+
+    font-family: 'Roboto', sans-serif;
+    font-size: $font-size5;
+    font-weight: 400;
+    line-height: 1.2em;
+  }
+
+  img {
+    margin: 0 14px;
+    width: 15px;
+    height: 14px;
+  }
+
+  img[src$='tel'] {
+    margin: 0 10px;
+    width: 23px;
+    height: 23px;
+  }
+}
+
+@media (max-width: 768px) {
+  .input-container {
+    max-width: 530px;
+  }
+}
