@@ -2,9 +2,15 @@
 @import './_vars.scss';
 @import './_common-styles.scss';
 
+// Dropdown styles
+@import '../components/datepicker/flatpickr.scss';
+// Modified to match design
+@import '../components/datepicker/dark.scss';
+
 @import '../components/button/_button.scss';
 @import '../components/section-header/_section-header.scss';
 @import '../components/link/_links.scss';
 @import '../components/logo/_logo.scss';
 @import '../components/radio-button/_radio-button.scss';
 @import '../components/input/_input.scss';
+@import '../components/datepicker/_datepicker.scss';
