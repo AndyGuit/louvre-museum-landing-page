@@ -1,15 +1,14 @@
-import flatpickr from 'flatpickr';
-
 const options = {
   dateFormat: 'l, F d',
   minDate: 'today',
+  monthSelectorType: 'static',
   onChange(selectedDates, dateString, instance) {
     const formatedDate = dateString
       .split(' ')
       .map((word, i) => i === 0 ? word.slice(0, 3) + ',' : word.slice(0, 3))
       .join(' ');
 
-    instance.input.value = formatedDate;
+    instance.input.querySelector('input').value = formatedDate;
 
     // TODO:
     // send dateString to ticket form
@@ -22,6 +21,8 @@ const options = {
   ],
 };
 
-const datepickerEl = '.datepicker > input';
+const datepickerEl =  document.querySelector('.datepicker');
 
 export const datepicker = flatpickr(datepickerEl, options);
+
+datepickerEl.addEventListener('click', datepicker.open);
