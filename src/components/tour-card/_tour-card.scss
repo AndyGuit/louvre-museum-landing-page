@@ -1,0 +1,117 @@
+.tour-card {
+  max-width: 440px;
+  display: block;
+
+  color: #000;
+
+  &__img {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  &__header {
+    font-family: 'Forum';
+    font-size: $font-size2;
+    font-weight: 400;
+    text-transform: uppercase;
+    line-height: 1.1em;
+    letter-spacing: 5px;
+
+    margin-bottom: 10px;
+  }
+
+  &__links {
+    font-weight: 100;
+    line-height: 1.18em;
+  }
+
+  &__link {
+    font-size: $font-size4;
+    margin-bottom: 15px;
+  }
+
+  &__street {
+    font-size: $font-size5;
+  }
+
+  .horizontal-line {
+    width: 68%;
+    margin-bottom: 15px;
+  }
+
+  &:hover .horizontal-line {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .tour-card {
+    max-width: 330px;
+
+    &__header {
+      font-size: $font-size3;
+      letter-spacing: 3px;
+    }
+
+    .horizontal-line {
+      width: 45.5%;
+      margin-bottom: 10px;
+    }
+
+    &__link {
+      font-size: 20px;
+    }
+
+    &__street {
+      font-size: 16px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .tour-card {
+    max-width: 280px;
+
+    &__img {
+      margin-bottom: 23px;
+    }
+
+    &__header {
+      font-size: $font-size4;
+      letter-spacing: 3px;
+      margin-bottom: 8px;
+    }
+
+    .horizontal-line {
+      width: 53.5%;
+    }
+
+    &__link {
+      font-size: $font-size5;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+@media (max-width: 420px) {
+  .tour-card {
+    &__img {
+      margin-bottom: 22px;
+    }
+
+    &__header {
+      font-size: $font-size5;
+      letter-spacing: 5px;
+      margin-bottom: 8px;
+    }
+
+    .horizontal-line {
+      width: 53.5%;
+    }
+
+    &__link {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+  }
+}

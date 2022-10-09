@@ -2,7 +2,7 @@
 @import './_vars.scss';
 @import './_common-styles.scss';
 
-// Dropdown styles
+// date/timepicker styles
 @import '../components/datepicker/flatpickr.scss';
 // Modified to match design
 @import '../components/datepicker/dark.scss';
@@ -16,6 +16,7 @@
 @import '../components/datepicker/_datepicker.scss';
 @import '../components/timepicker/_timepicker.scss';
 @import '../components/dropdown/_dropdown.scss';
+@import '../components/tour-card/_tour-card.scss';
 
 body {
   padding: 20px;

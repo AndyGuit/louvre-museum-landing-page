@@ -13,3 +13,10 @@ body {
 ul {
   list-style: none;
 }
+
+.horizontal-line {
+  width: 100%;
+  height: 3px;
+  background: $primary-color;
+  transition: width 0.5s;
+}

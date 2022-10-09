@@ -1,4 +1,6 @@
 .dropdown {
+  font-size: $font-size5;
+  line-height: 1.16em;
   position: relative;
   cursor: pointer;
 
@@ -9,6 +11,7 @@
   &__arrow {
     width: 17px;
     height: 17px;
+    transition: transform 0.15s ease-in;
   }
 
   &__value {
