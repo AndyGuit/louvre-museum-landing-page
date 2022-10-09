@@ -1,0 +1,40 @@
+.dropdown {
+  position: relative;
+  cursor: pointer;
+
+  &__icon {
+    width: 15px;
+    height: 15px;
+  }
+  &__arrow {
+    width: 17px;
+    height: 17px;
+  }
+
+  &__value {
+    width: 100%;
+  }
+
+  &__options {
+    display: none;
+    width: calc(100% + 2px);
+    position: absolute;
+    top: 100%;
+    right: -1px;
+    border: 1px solid $primary-bgc;
+  }
+
+  &__option {
+    padding: 12px 0 12px 20px;
+    background: #fff;
+
+    &:hover {
+      background-color: $primary-bgc;
+      color: #fff;
+    }
+  }
+
+  &.active .dropdown__options {
+    display: block;
+  }
+}

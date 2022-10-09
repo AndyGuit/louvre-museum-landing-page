@@ -15,3 +15,8 @@
 @import '../components/input/_input.scss';
 @import '../components/datepicker/_datepicker.scss';
 @import '../components/timepicker/_timepicker.scss';
+@import '../components/dropdown/_dropdown.scss';
+
+body {
+  padding: 20px;
+}
