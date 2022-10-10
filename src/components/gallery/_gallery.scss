@@ -1,0 +1,33 @@
+.gallery {
+  &__container {
+    position: relative;
+    overflow: hidden;
+    max-height: 1960px;
+    height: 100%;
+    margin-top: 75px;
+    // remove later
+    max-width: 1440px;
+  }
+
+  &__pictures {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 2900px;
+    row-gap: 24px;
+    column-gap: 28px;
+  }
+
+  &__picture:nth-child(1),
+  &__picture:nth-child(11) {
+    margin-top: 50px;
+  }
+
+  &__gradient {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 360px;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+  }
+}
