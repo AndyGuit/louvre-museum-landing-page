@@ -32,12 +32,15 @@
     background: #fff;
 
     &:hover {
-      background-color: $primary-bgc;
-      color: #fff;
+      background-color: #e7e7e7;
     }
   }
 
   &.active .dropdown__options {
     display: block;
+  }
+
+  &.active .dropdown__arrow {
+    transform: rotate(180deg);
   }
 }
