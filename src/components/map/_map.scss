@@ -23,3 +23,30 @@
     cursor: pointer;
   }
 }
+
+@media (max-width: 1024px) {
+  .map-container {
+    max-width: 694px;
+
+    & > div {
+      height: 454px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .map-container {
+    max-width: 100%;
+    & > div {
+      height: 476px;
+    }
+  }
+}
+
+@media (max-width: 420px) {
+  .map-container {
+    & > div {
+      height: 248px;
+    }
+  }
+}
