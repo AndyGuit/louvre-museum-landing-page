@@ -18,6 +18,10 @@
     column-gap: 28px;
   }
 
+  &__picture img {
+    width: 100%;
+  }
+
   &__picture:nth-child(1),
   &__picture:nth-child(11) {
     margin-top: 50px;

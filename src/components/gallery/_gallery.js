@@ -15,8 +15,6 @@ class Gallery {
       const div = document.createElement('div');
       div.classList.add('gallery__picture');
 
-      console.log(pic)
-
       const img = document.createElement('img');
       img.src = pic;
       img.alt = pic;

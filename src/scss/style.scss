@@ -7,6 +7,9 @@
 // Modified to match design
 @import '../components/datepicker/dark.scss';
 
+// mapbox styles
+@import '../components/map/_mapbox-gl.scss';
+
 @import '../components/button/_button.scss';
 @import '../components/section-header/_section-header.scss';
 @import '../components/link/_links.scss';
@@ -20,7 +23,9 @@
 @import '../components/comparison-slider/_comparison-slider.scss';
 @import '../components/parallax/_parallax.scss';
 @import '../components/gallery/_gallery.scss';
+@import '../components/map/_map.scss';
 
 body {
   padding: 10px;
+  padding-bottom: 200px;
 }
