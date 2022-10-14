@@ -3,12 +3,15 @@
 @import './_common-styles.scss';
 
 // date/timepicker styles
-@import '../components/datepicker/flatpickr.scss';
+@import './flatpickr.scss';
 // Modified to match design
-@import '../components/datepicker/dark.scss';
+@import './dark.scss';
 
 // mapbox styles
-@import '../components/map/_mapbox-gl.scss';
+@import './mapbox-gl.scss';
+
+// Swiper styles
+@import './swiper-bundle.min.scss';
 
 @import '../components/button/_button.scss';
 @import '../components/section-header/_section-header.scss';
@@ -24,6 +27,7 @@
 @import '../components/parallax/_parallax.scss';
 @import '../components/gallery/_gallery.scss';
 @import '../components/map/_map.scss';
+@import '../components/slider-main/_slider-main.scss';
 
 body {
   padding: 10px;
