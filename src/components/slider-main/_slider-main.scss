@@ -1,6 +1,7 @@
 .slider {
   &-main {
-    width: 1000px;
+    width: 100%;
+    max-width: 1000px;
     height: 810px;
     margin-right: 0;
 
@@ -24,14 +25,13 @@
 
     &__slide img {
       max-width: 100%;
-      height: 750px;
     }
 
     &__button-next,
     &__button-prev {
       color: #fff;
       top: 92.2%;
-      right: 75px;
+      right: 7.7%;
 
       &:hover {
         color: $secondary-color;
@@ -58,6 +58,7 @@
       align-items: center;
       width: 600px !important;
       height: 120px;
+      gap: 25px;
       left: unset !important;
       right: 0;
       bottom: 0 !important;
@@ -69,7 +70,7 @@
         width: 16px;
         height: 16px;
         border-radius: 0;
-        margin: 0 12.5px !important;
+        margin: 0 !important;
 
         &-active {
           background-color: $secondary-color;
@@ -87,6 +88,111 @@
       letter-spacing: 2px;
 
       cursor: default;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .slider-main {
+    max-width: 700px;
+    height: 585px;
+
+    &::before {
+      width: 175px;
+    }
+
+    &__pagination {
+      padding-left: 35px;
+      .swiper-pagination-bullet {
+        width: 12px;
+        height: 12px;
+      }
+    }
+
+    &__fraction {
+      font-size: 20px;
+      left: 20.6%;
+    }
+
+    &__button-next,
+    &__button-prev {
+      top: 89.2%;
+      right: 11%;
+    }
+
+    &__button-prev {
+      left: 78.2% !important;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .slider-main {
+    max-width: 728px;
+    height: 645px;
+
+    &::before {
+      display: none;
+    }
+
+    &__pagination {
+      width: 100% !important;
+      height: 100px;
+      padding-left: 0;
+      padding-right: 8px;
+    }
+
+    &__fraction {
+      left: 22.6%;
+    }
+
+    &__button-next,
+    &__button-prev {
+      top: 91.9%;
+      right: 22.5%;
+    }
+
+    &__button-prev {
+      left: 66.9% !important;
+    }
+  }
+}
+
+@media (max-width: 420px) {
+  .slider-main {
+    height: 365px;
+
+    &__pagination {
+      height: 80px;
+      gap: 10px;
+      padding-right: 0;
+      padding-top: 5px;
+
+      .swiper-pagination-bullet {
+        width: 7px;
+        height: 7px;
+      }
+    }
+
+    &__fraction {
+      font-size: 16px;
+      letter-spacing: 1px;
+      left: 19.6%;
+    }
+
+    &__button-next,
+    &__button-prev {
+      top: 89.2%;
+      right: 19.3%;
+
+      &::before,
+      &::after {
+        font-size: 24px;
+      }
+    }
+
+    &__button-prev {
+      left: 65.8% !important;
     }
   }
 }
