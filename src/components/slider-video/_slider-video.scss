@@ -4,10 +4,6 @@
 
   text-align: center;
 
-  &__wrapper {
-    gap: 29px;
-  }
-
   &__slide {
     max-width: 452px;
     height: 254px;
@@ -33,7 +29,7 @@
   &__button-next,
   &__button-prev {
     top: 92.5%;
-    right: 44.2%;
+    right: 42.5%;
 
     &:hover {
       &::after {
@@ -49,7 +45,7 @@
   }
 
   &__button-prev {
-    left: 44.2%;
+    left: 42.5%;
   }
 
   .swiper-pagination-bullet {
@@ -63,6 +59,70 @@
 
     &-active {
       background: #333;
+    }
+  }
+}
+
+@media (max-width: 1440px) {
+  .slider-video {
+    max-width: 1024px;
+    height: 222px;
+
+    &__slide {
+      height: 170px;
+    }
+
+    &__button-next {
+      right: 15.5%;
+    }
+
+    &__button-prev {
+      left: 15.5%;
+    }
+
+    &__button-next,
+    &__button-prev {
+      top: 89.7%;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .slider-video {
+    max-width: 728px;
+    height: 245px;
+
+    &__slide {
+      height: 199px;
+    }
+
+    .swiper-pagination-bullet {
+      width: 10px;
+      height: 10px;
+    }
+    &__button-next,
+    &__button-prev {
+      top: 91%;
+    }
+  }
+}
+
+@media (max-width: 420px) {
+  .slider-video {
+    max-width: 380px;
+    height: 149px;
+
+    &__slide {
+      height: 101px;
+    }
+
+    .swiper-pagination-bullet {
+      width: 8px;
+      height: 8px;
+    }
+    &__button-next,
+    &__button-prev {
+      top: 86.5%;
     }
   }
 }

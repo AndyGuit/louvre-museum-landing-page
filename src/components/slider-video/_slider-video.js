@@ -6,6 +6,22 @@ const optionsVideo = {
   loop: true,
   slidesPerView: 3,
 
+  breakpoints: {
+    1440: {
+      spaceBetween: 42
+    },
+    769: {
+      slidesPerView: 3
+    },
+    421: {
+      slidesPerView: 2,
+      spaceBetween: 20
+    },
+    200: {
+
+    }
+  },
+
   navigation: {
     nextEl: '.slider-video__button-next',
     prevEl: '.slider-video__button-prev',
