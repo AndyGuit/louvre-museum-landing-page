@@ -18,11 +18,6 @@ const optionsMain = {
     el: '.slider-main__pagination',
     clickable: true,
   },
-
-  navigation: {
-    nextEl: '.slider-main__button-next',
-    prevEl: '.slider-main__button-prev',
-  },
 }
 
 class SliderMain {

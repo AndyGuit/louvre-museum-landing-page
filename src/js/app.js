@@ -8,5 +8,7 @@ import { comparisonSlider } from '../components/comparison-slider/_comparison-sl
 import { gallery } from '../components/gallery/_gallery.js';
 import map from '../components/map/_map.js';
 import { sliderMain } from '../components/slider-main/_slider-main.js';
+import { sliderVideo } from '../components/slider-video/_slider-video.js';
+
 
 flsFunctions.isWebp();
