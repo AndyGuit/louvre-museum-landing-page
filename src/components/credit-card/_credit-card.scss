@@ -20,12 +20,18 @@
     padding: 10px;
     border: 0.5px solid #a4a4a3;
 
+    &:focus {
+      outline: none;
+    }
+
     &.invalid {
-      border: 2px solid red;
+      border: 2px solid $primary-color;
+      background: rgba(255, 0, 0, 0.1);
     }
 
     &.valid {
       border: 2px solid green;
+      background: rgba(0, 255, 0, 0.1);
     }
   }
 
@@ -42,6 +48,7 @@
   &__front {
     background-color: #bcbcbc;
     justify-content: space-between;
+    z-index: 1;
   }
 
   &__back {
@@ -52,7 +59,6 @@
     position: absolute;
     top: 14%;
     right: -30.3%;
-    z-index: -1;
 
     //stripe
     &::before {

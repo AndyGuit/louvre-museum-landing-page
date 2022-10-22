@@ -2,13 +2,18 @@
   <div class="credit-card__front">
     <div class="credit-card__number">
       <label for="">Card number</label>
-      <input type="text" name="" id="" class="card-number" />
+      <input type="text" class="card-number" />
     </div>
     <div class="credit-card__expiration">
       <label for="">Expiration date</label>
       <div class="credit-card__dates">
-        <input type="number" min="01" max="12" value="03" name="" id="" />
-        <input type="number" min="2022" max="2035" value="2024" name="" id="" />
+        <input type="number" min="01" max="12" value="03" class="date-month" />
+        <input
+          type="number"
+          min="2022"
+          max="2035"
+          value="2024"
+          class="date-year" />
       </div>
     </div>
     <div class="credit-card__type">
@@ -20,13 +25,13 @@
     </div>
     <div class="credit-card__name">
       <label for="">Cardholder name</label>
-      <input type="text" name="" id="" />
+      <input class="card-name" type="text" />
     </div>
   </div>
   <div class="credit-card__back">
     <div class="cvv">
       <label for="">CVC/CVV</label>
-      <input type="password" name="" id="" />
+      <input type="password" maxlength="4" />
       <span>The last 3 or 4 digits on back of the card</span>
     </div>
   </div>

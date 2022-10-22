@@ -10,5 +10,6 @@ import map from '../components/map/_map.js';
 import { sliderMain } from '../components/slider-main/_slider-main.js';
 import { sliderVideo } from '../components/slider-video/_slider-video.js';
 import { videoPlayer } from '../components/video-player/_video-player.js';
+import { creditCard } from '../components/credit-card/_credit-card.js';
 
 flsFunctions.isWebp();
