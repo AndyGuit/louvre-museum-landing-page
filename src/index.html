@@ -28,6 +28,13 @@
     './img/icons/icons.svg#email', placeholder: 'E-mail', type: 'email', id:
     'email'}) @@include('./components/input/_input.html', {imgSrc:
     './img/icons/icons.svg#tel', placeholder: 'Phone', type: 'tel', id: 'tel'}) -->
+    <header class="section--dark">
+      <div class="header container container--header">
+        @@include('./components/logo/_logo.html', {text: 'louvre', imgSrc:
+        './img/icons/icons.svg#site-logo'})
+        @@include('./components/nav/_nav--header.html', {})
+      </div>
+    </header>
     @@include('./components/dropdown/_dropdown.html', {imgSrc:
     './img/icons/icons.svg#ticket-type', toggleSrc:
     './img/icons/icons.svg#arrow'})

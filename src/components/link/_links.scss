@@ -71,8 +71,12 @@ a:active {
   }
 }
 
-@media (max-width: 420px) {
+@media (max-width: 436px) {
   .link {
     font-size: 16px;
+
+    &--nav {
+      font-size: 20px;
+    }
   }
 }

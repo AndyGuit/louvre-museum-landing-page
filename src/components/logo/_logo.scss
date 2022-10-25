@@ -19,3 +19,18 @@
     text-transform: uppercase;
   }
 }
+
+@media (max-width: 550px) {
+  .logo {
+    width: 100%;
+    max-width: 136px;
+
+    &__img {
+      width: 29px;
+      height: 29px;
+    }
+    &__text {
+      font-size: 16px;
+    }
+  }
+}

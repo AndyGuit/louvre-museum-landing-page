@@ -1,5 +1,6 @@
 @import './fonts';
 @import './_vars.scss';
+
 @import './_common-styles.scss';
 
 // date/timepicker styles
@@ -31,8 +32,7 @@
 @import '../components/slider-video/_slider-video.scss';
 @import '../components/video-player/_video-player.scss';
 @import '../components/credit-card/_credit-card.scss';
+@import '../components/nav/_nav.scss';
 
-body {
-  padding: 10px;
-  padding-bottom: 200px;
-}
+// Sections
+@import './sections/_header.scss';
