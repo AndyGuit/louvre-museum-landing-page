@@ -19,9 +19,22 @@ ul {
   height: 3px;
   background: $primary-color;
   transition: width 0.5s;
+  margin: 25px 0 75px 0;
 
   &--white {
     background: #ffffff80;
+  }
+}
+
+@media (max-width: 1024px) {
+  .horizontal-line {
+    margin: 25px 0 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .horizontal-line {
+    margin: 20px 0 40px;
   }
 }
 

@@ -62,7 +62,7 @@
               {className: 'section-header--gold', text: 'Virtual tour'})
               <hr class="horizontal-line" />
               <div class="virtual-tour__cards">
-                <div class="virtual-tour__card card1">
+                <div class="virtual-tour__card">
                   @@include('./components/tour-card/_tour-card.html', {imgSrc:
                   '../img/virtual-tour/virtual-tour1.jpg', header: 'royal palace',
                   link: '#'})
@@ -93,6 +93,23 @@
                   link: '#'})
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="explore section--dark">
+        <div class="container">
+          <div class="explore__wrapper">
+            <div class="explore__content">
+              @@include('components/section-header/_section-header.html',
+              {className: 'section-header--white', text: 'Picture explore'})
+              <hr class="horizontal-line" />
+              <p>Las Meninas is a 1656 painting by Diego Velázquez, the leading artist of the Spanish Golden Age.</p>
+              <p>It was cleaned in 1984 to remove a <span class="highlight">"yellow veil"</span> of dust that had gathered since the previous restoration in the 19th century.</p>
+              <p>The cleaning provoked furious protests, not because the picture had been damaged in any way, but because it looked different.</p>
+            </div>
+            <div class="explore__slider">
+              @@include('./components/comparison-slider/_comparison-slider.html', {})
             </div>
           </div>
         </div>
