@@ -11,6 +11,12 @@
 
       &__menu {
         display: none;
+
+        &-img,
+        &-social,
+        .horizontal-line {
+          display: none;
+        }
       }
     }
   }
@@ -175,6 +181,11 @@
           height: 161px;
           background: url('../img/nav-menu/img3.jpg') no-repeat center;
         }
+      }
+
+      &-social,
+      .horizontal-line {
+        display: block;
       }
 
       &-social ul {
