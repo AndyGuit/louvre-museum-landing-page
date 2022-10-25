@@ -35,22 +35,42 @@
         @@include('./components/nav/_nav--header.html', {})
       </div>
     </header>
-    @@include('./components/dropdown/_dropdown.html', {imgSrc:
+    <main>
+      <section class="welcome section--dark">
+        <div class="container">
+          <div class="welcome__wrapper">
+            <div class="welcome__content">
+              <h2 class="section-header section-header--white">
+                Welcome <br />
+                to the louvre
+              </h2>
+              <p>From the castle to the museum</p>
+              @@include('./components/link/_link.html', {href: '#', className:
+              'link--discover', text: 'Discover the Louvre', })
+            </div>
+            <div class="welcome__slider">
+              @@include('./components/slider-main/_slider-main.html', {})
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- @@include('./components/dropdown/_dropdown.html', {imgSrc:
     './img/icons/icons.svg#ticket-type', toggleSrc:
     './img/icons/icons.svg#arrow'})
     @@include('./components/datepicker/_datepicker.html', {iconSrc:
     './img/icons/icons.svg#date', toggleSrc: './img/icons/icons.svg#arrow'})
     @@include('./components/timepicker/_timepicker.html', {iconSrc:
     './img/icons/icons.svg#time', toggleSrc: './img/icons/icons.svg#arrow'})
-    <!-- @@include('./components/tour-card/_tour-card.html', {imgSrc:
-    '../img/virtual-tour/virtual-tour1.jpg', header: 'royal palace', link: '#'}) -->
+    @@include('./components/tour-card/_tour-card.html', {imgSrc:
+    '../img/virtual-tour/virtual-tour1.jpg', header: 'royal palace', link: '#'})
     @@include('./components/comparison-slider/_comparison-slider.html', {})
-    <!-- @@include('./components/parallax/_parallax.html', {}) -->
+    @@include('./components/parallax/_parallax.html', {})
     @@include('./components/gallery/_gallery.html', {})
     @@include('./components/map/_map.html', {})
     @@include('./components/slider-main/_slider-main.html', {})
     @@include('./components/video-player/_video-player.html', {})
     @@include('./components/slider-video/_slider-video.html', {})
-    @@include('./components/credit-card/_credit-card.html', {})
+    @@include('./components/credit-card/_credit-card.html', {}) -->
   </body>
 </html>

@@ -60,7 +60,8 @@ a:active {
 
     &--discover {
       max-width: 300px;
-      padding: 25px 50px;
+      padding: 20px 30px;
+      height: 60px;
     }
   }
 }
@@ -68,6 +69,10 @@ a:active {
 @media (max-width: 768px) {
   .link {
     font-size: $font-size5;
+
+    &--discover {
+      display: none;
+    }
   }
 }
 
