@@ -54,6 +54,49 @@
           </div>
         </div>
       </section>
+      <section class="virtual-tour">
+        <div class="container">
+          <div class="virtual-tour__wrapper">
+            <div class="virtual-tour__content">
+              @@include('components/section-header/_section-header.html',
+              {className: 'section-header--gold', text: 'Virtual tour'})
+              <hr class="horizontal-line" />
+              <div class="virtual-tour__cards">
+                <div class="virtual-tour__card card1">
+                  @@include('./components/tour-card/_tour-card.html', {imgSrc:
+                  '../img/virtual-tour/virtual-tour1.jpg', header: 'royal palace',
+                  link: '#'})
+                </div>
+                <div class="virtual-tour__card">
+                  @@include('./components/tour-card/_tour-card.html', {imgSrc:
+                  '../img/virtual-tour/virtual-tour2.jpg', header: 'Denon Wing',
+                  link: '#'})
+                </div>
+                <div class="virtual-tour__card">
+                  @@include('./components/tour-card/_tour-card.html', {imgSrc:
+                  '../img/virtual-tour/virtual-tour3.jpg', header: 'Colonnade Perrault',
+                  link: '#'})
+                </div>
+                <div class="virtual-tour__card">
+                  @@include('./components/tour-card/_tour-card.html', {imgSrc:
+                  '../img/virtual-tour/virtual-tour4.jpg', header: 'Greek hall',
+                  link: '#'})
+                </div>
+                <div class="virtual-tour__card">
+                  @@include('./components/tour-card/_tour-card.html', {imgSrc:
+                  '../img/virtual-tour/virtual-tour5.jpg', header: 'Mona Lisa',
+                  link: '#'})
+                </div>
+                <div class="virtual-tour__card">
+                  @@include('./components/tour-card/_tour-card.html', {imgSrc:
+                  '../img/virtual-tour/virtual-tour6.jpg', header: 'Night Palace',
+                  link: '#'})
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <!-- @@include('./components/dropdown/_dropdown.html', {imgSrc:
     './img/icons/icons.svg#ticket-type', toggleSrc:
