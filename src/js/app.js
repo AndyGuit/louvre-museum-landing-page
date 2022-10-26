@@ -4,7 +4,8 @@ import flatpickr from 'flatpickr';
 import { navMenu } from '../components/nav/_nav.js';
 import { sliderMain } from '../components/slider-main/_slider-main.js';
 import { comparisonSlider } from '../components/comparison-slider/_comparison-slider.js';
-
+import { sliderVideo } from '../components/slider-video/_slider-video.js';
+import { videoPlayer } from '../components/video-player/_video-player.js';
 
 
 // import { datepicker } from '../components/datepicker/_datepicker.js';

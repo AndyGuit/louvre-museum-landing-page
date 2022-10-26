@@ -114,6 +114,24 @@
           </div>
         </div>
       </section>
+      <section class="video">
+        <div class="container">
+          <div class="video__wrapper">
+            <div class="video__content">
+              @@include('components/section-header/_section-header.html',
+                {className: 'section-header--gold', text: 'Video journey'})
+              <p>
+                Enter and visit one of the most famous museums in the world and
+                enjoy masterpieces such as Mona Lisa or Hammurabi's Code
+              </p>
+            </div>
+            <div class="video__player">
+              @@include('./components/video-player/_video-player.html', {})
+              @@include('./components/slider-video/_slider-video.html', {})
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <!-- @@include('./components/dropdown/_dropdown.html', {imgSrc:
     './img/icons/icons.svg#ticket-type', toggleSrc:
