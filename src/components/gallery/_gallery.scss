@@ -2,11 +2,9 @@
   &__container {
     position: relative;
     overflow: hidden;
-    max-height: 1960px;
+    max-height: 1885px;
     height: 100%;
     margin-top: 75px;
-    // remove later
-    max-width: 1440px;
   }
 
   &__pictures {
@@ -18,8 +16,19 @@
     column-gap: 28px;
   }
 
-  &__picture img {
-    width: 100%;
+  &__picture {
+    transition: opacity 0.5s ease, transform 0.5s ease;
+
+    opacity: 0;
+    transform: scale(0.95);
+
+    &.active {
+      opacity: 1;
+      transform: scale(1);
+    }
+    img {
+      width: 100%;
+    }
   }
 
   &__picture:nth-child(1),

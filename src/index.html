@@ -132,6 +132,19 @@
           </div>
         </div>
       </section>
+      <section class="gallery-section section--dark">
+        <div class="container">
+          <div class="gallery-section__wrapper">
+            <div class="gallery-section__content">
+              @@include('components/section-header/_section-header.html',
+              {className: 'section-header--white', text: 'Art gallery'})
+            </div>
+            <div class="gallery-section__pictures">
+              @@include('./components/gallery/_gallery.html', {})
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <!-- @@include('./components/dropdown/_dropdown.html', {imgSrc:
     './img/icons/icons.svg#ticket-type', toggleSrc:

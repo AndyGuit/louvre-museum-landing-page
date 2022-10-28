@@ -5,10 +5,44 @@ class Gallery {
       return `./img/gallery/gallery${i + 1}.jpg`
     });
 
-    this.generateRandomImages();
+    this.observeSection();
   }
 
-  generateRandomImages() {
+  observeElement = (element) => {
+    const observer = new IntersectionObserver(this.slideInOnScroll, {
+      root: null,
+      threshold: 0.10,
+    });
+
+    observer.observe(element);
+  }
+
+  slideInOnScroll = ([entry]) => {
+    const isVisible = entry.isIntersecting;
+    const targetImg = entry.target;
+
+    isVisible ? targetImg.classList.add('active') : targetImg.classList.remove('active');
+  }
+
+  observeSection = () => {
+    const section = this.container.closest('section');
+    const observer = new IntersectionObserver(this.generateGalleryOnScroll, {
+      root: null,
+      threshold: 0.01,
+    });
+
+    observer.observe(section);
+  }
+
+  generateGalleryOnScroll = ([entry]) => {
+    const isVisible = entry.isIntersecting;
+
+    isVisible ? this.generateRandomImages() : null;
+  }
+
+  generateRandomImages = () => {
+    this.container.innerHTML = '';
+
     this.imgArrSrc.sort(() => Math.random() - 0.5);
 
     this.imgArrSrc.forEach(pic => {
@@ -20,6 +54,8 @@ class Gallery {
       img.alt = pic;
       this.container.append(div);
       div.append(img);
+
+      this.observeElement(div);
     })
   }
 }
