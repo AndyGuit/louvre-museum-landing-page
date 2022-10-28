@@ -3,3 +3,19 @@
     padding: 75px 0;
   }
 }
+
+@media (max-width: 1024px) {
+  .gallery-section {
+    &__wrapper {
+      padding: 70px 0;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery-section {
+    &__wrapper {
+      padding: 40px 0;
+    }
+  }
+}

@@ -34,7 +34,7 @@
 @media (max-width: 1024px) {
   .video {
     &__wrapper {
-      padding: 70px 0;
+      padding: 70px 0 60px;
     }
 
     &__content {
@@ -56,7 +56,7 @@
 @media (max-width: 768px) {
   .video {
     &__wrapper {
-      padding: 40px 0;
+      padding: 40px 0 47px;
     }
 
     &__content {
@@ -71,8 +71,11 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 426px) {
   .video {
+    &__wrapper {
+      padding: 40px 0 40px;
+    }
     &__player {
       .video-player {
         margin-bottom: 40px;
