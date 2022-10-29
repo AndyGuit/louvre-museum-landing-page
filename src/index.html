@@ -145,6 +145,56 @@
           </div>
         </div>
       </section>
+      <section class="buy-tickets">
+        <div class="container">
+          <div class="buy-tickets__wrapper">
+            <div class="buy-tickets__content">
+              @@include('components/section-header/_section-header.html',
+              {className: 'section-header--gold', text: 'Buy tickets'})
+              <hr class="horizontal-line" />
+            </div>
+            <div class="buy-tickets__calculate">
+              <div class="buy-tickets__img">
+              </div>
+              <div class="buy-tickets__tickets">
+                <div class="buy-tickets__type">
+                  <h4>Ticket Type</h4>
+                  <div class="buy-tickets__buttons">
+                    @@include('./components/radio-button/_radio-button.html', {ticketType:
+                    'permanent-exhibition', text: 'Permanent exhibition'})
+                    @@include('./components/radio-button/_radio-button.html', {ticketType:
+                    'temporary-exhibition', text: 'Temporary exhibition'})
+                    @@include('./components/radio-button/_radio-button.html', {ticketType:
+                    'combined-admission', text: 'Combined Admission'})
+                  </div>
+                </div>
+                <div class="buy-tickets__amount">
+                  <h4>Amount</h4>
+                  <p>Basic 18+</p>
+                  <div class="buy-tickets__tickets-count">
+                    @@include('components/button/_button.html', {className: "button--calc-amount",
+                    type: "button", text: "-"})
+                    <input type="number" min="0" max="20" value="1" name="" id="amount-basic">
+                    @@include('components/button/_button.html', {className: "button--calc-amount",
+                    type: "button", text: "+"})
+                  </div>
+                  <p>Senior 65+</p>
+                  <div class="buy-tickets__tickets-count">
+                    @@include('components/button/_button.html', {className: "button--calc-amount",
+                    type: "button", text: "-"})
+                    <input type="number" min="0" max="20" value="1" name="" id="amount-senior">
+                    @@include('components/button/_button.html', {className: "button--calc-amount",
+                    type: "button", text: "+"})
+                  </div>
+                  <h4 class="buy-tickets__total-sum">Total €<span>220</span></h4>
+                  @@include('components/button/_button.html', {className: "button--buy-now",
+                  type: "button", text: "Buy Now"})
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <!-- @@include('./components/dropdown/_dropdown.html', {imgSrc:
     './img/icons/icons.svg#ticket-type', toggleSrc:

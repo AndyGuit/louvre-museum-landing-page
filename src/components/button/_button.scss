@@ -17,7 +17,7 @@ button:active {
   letter-spacing: 2px;
 
   &--buy-now {
-    max-width: 175px;
+    width: 175px;
     height: 50px;
     border-radius: 2px;
     background-color: $primary-bgc;
@@ -29,7 +29,7 @@ button:active {
 
   &--calc-amount {
     max-width: 50px;
-    height: 50px;
+    height: 44px;
     background-color: #fff;
 
     font-size: $font-size2;
@@ -65,7 +65,7 @@ button:active {
   }
 }
 
-@media (max-width: 420px) {
+@media (max-width: 426px) {
   .button {
     &--buy-now {
       font-size: $font-size5;
