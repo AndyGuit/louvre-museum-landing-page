@@ -52,6 +52,8 @@ class TicketsSectionCalculator {
         this.calculateTotalPrice();
       })
     })
+
+    this.buyNowBtn.addEventListener('click', this.buttonRippleEffect);
   }
 
   setPriceData = () => {
@@ -76,6 +78,17 @@ class TicketsSectionCalculator {
 
     this.ticketsPrice.totalPrice = totalPrice;
     this.totalPriceEl.textContent = totalPrice;
+  }
+
+  buttonRippleEffect = (e) => {
+    const circle = document.createElement('span');
+    circle.classList.add('circle');
+    circle.style.top = e.offsetY + 'px';
+    circle.style.left = e.offsetX + 'px';
+
+    e.target.appendChild(circle);
+
+    e.target.addEventListener('animationend', () => circle.remove());
   }
 }
 
