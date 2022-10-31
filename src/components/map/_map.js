@@ -57,6 +57,7 @@ class CenterToMuseum {
   createButton() {
     const btn = document.createElement('button');
     btn.classList.add('map__control-center');
+    btn.setAttribute('title', 'Louvre');
 
     btn.addEventListener('click', () => {
       this._map.flyTo({center: options.center, zoom: options.zoom, essential: true })
@@ -72,5 +73,8 @@ class CenterToMuseum {
 }
 
 map.addControl(new CenterToMuseum());
+
+// Add fullscreen control
+map.addControl(new mapboxgl.FullscreenControl());
 
 export default map;
