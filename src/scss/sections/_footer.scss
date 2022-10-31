@@ -82,3 +82,15 @@
     }
   }
 }
+
+@media (max-width: 426px) {
+  .footer {
+    &__wrapper {
+      .nav__menu-social {
+        ul {
+          gap: 5px;
+        }
+      }
+    }
+  }
+}

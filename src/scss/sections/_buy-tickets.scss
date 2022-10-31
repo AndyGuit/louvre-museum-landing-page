@@ -9,8 +9,11 @@
   }
 
   &__img {
+    display: block;
+    max-width: 720px;
+    width: 100%;
     height: 550px;
-    flex: 1 0 720px;
+    flex: 3;
 
     background: url('../img/tickets-img.jpg');
     background-size: cover;
@@ -18,6 +21,7 @@
   }
 
   &__tickets {
+    flex: 1;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -104,7 +108,6 @@
       gap: 80px;
     }
     &__img {
-      flex-basis: 700px;
       height: 440px;
     }
 
@@ -179,7 +182,6 @@
     }
     &__img {
       max-width: 444px;
-      flex-basis: 444px;
       height: 340px;
     }
 
