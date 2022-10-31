@@ -196,6 +196,37 @@
         </div>
       </section>
       @@include('./components/parallax/_parallax.html', {})
+      <section class="contacts">
+        <div class="container">
+          <div class="contacts__wrapper">
+            @@include('components/section-header/_section-header.html',
+            {className: 'section-header--gold', text: 'Contacts'})
+            <hr class="horizontal-line" />
+            <div class="contacts__content">
+              <div class="contacts__contacts">
+                <p class="contacts__header">Palais Royal<br />Musee du Louvre</p>
+                <ul class="contacts__list">
+                  <li>
+                    @@include('components/link/_link.html', {className: 'link--contact',
+                    text: 'address: 75001 Paris, France', href: '#'})
+                  </li>
+                  <li>
+                    @@include('components/link/_link.html', {className: 'link--contact',
+                    text: 'phone: +33(0) 1 40 20 50 50', href: 'tel:+330140205050'})
+                  </li>
+                  <li>
+                    @@include('components/link/_link.html', {className: 'link--contact',
+                    text: 'mail: info@louvre.fr', href: 'mailto:info@louvre.fr'})
+                  </li>
+                </ul>
+              </div>
+              <div class="contacts__map">
+                @@include('./components/map/_map.html', {})
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <!-- @@include('./components/dropdown/_dropdown.html', {imgSrc:
     './img/icons/icons.svg#ticket-type', toggleSrc:
