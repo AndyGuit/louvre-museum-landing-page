@@ -1,0 +1,345 @@
+.form-buy {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0,0.5);
+  transition: left 0.5s ease;
+  z-index: 200;
+  overflow: scroll;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  form {
+    max-width: 1440px;
+    width: 100%;
+    min-height: 70vh;
+    margin: 0 10px;
+    background: #fff;
+    position: relative;
+  }
+
+  &__close {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+
+    span {
+      display: block;
+      position: relative;
+      width: 25px;
+      height: 25px;
+
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 50%;
+        display: block;
+        border: 1px solid #030303;
+        height: 2px;
+        background-color: #030303;
+        width: 25px;
+      }
+
+      &::before {
+        transform: translate(0, -50%) rotate(45deg);
+      }
+
+      &::after {
+        transform: translate(0, -50%) rotate(-45deg);
+      }
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 47px 10px;
+    max-width: 970px;
+    margin: 0 auto;
+  }
+
+  &__data {
+    max-width: 400px;
+
+    .input-container {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__logo {
+    width: 85px;
+    height: 85px;
+    position: relative;
+    bottom: -23px;
+  }
+
+  .section-header {
+    font-size: 50px;
+    letter-spacing: 0;
+  }
+
+  &__subheader {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.17em;
+    color: $primary-color;
+
+    margin-top: 15px;
+  }
+
+  .horizontal-line {
+    margin: 10px 0 60px;
+  }
+
+  &__date-time {
+    display: flex;
+    gap: 20px;
+  }
+
+  &__tickets-count {
+    padding: 10px 15px 15px;
+    border: 1px solid #030303;
+
+    &-header {
+      font-family: 'Forum';
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 1.1em;
+
+      color: #9d8665;
+    }
+
+    .horizontal-line {
+      margin: 5px 0 15px;
+      height: 2px;
+       background: #740C11;
+    }
+
+    &-number {
+      display: flex;
+      justify-content: space-between;
+
+      &:first-of-type {
+        margin-bottom: 15px;
+      }
+
+      p {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 1.17em;
+      }
+    }
+
+    &-select {
+      display: flex;
+      max-width: 105px;
+      width: 100%;
+      border: 1px solid #030303;
+      text-align: center;
+
+      button {
+        height: 25px;
+        background-color: #030303;
+        color: #fff;
+        font-size: 15px;
+        text-align: center;
+      }
+
+      input[type="number"] {
+        all: unset;
+        -moz-appearance: textfield;
+        text-align: center;
+
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+        }
+
+        width: 100%;
+      }
+    }
+  }
+
+  &__overview {
+    max-width: 530px;
+    width: 100%;
+    margin-top: 47px;
+    padding: 25px 30px;
+    border: 1px solid #030303;
+
+    position: relative;
+
+    > img {
+      position: absolute;
+      top: 25px;
+      right: 30px;
+    }
+
+    h3 {
+      font-size: 32px;
+      font-weight: 500;
+      line-height: 1.17em;
+      color: #272727;
+    }
+
+    h5 {
+      font-size: 22px;
+      font-weight: 500;
+      line-height: 1.17em;
+      color: #740C11;
+      margin-bottom: 10px;
+    }
+
+    .overview {
+      &__date,
+      &__time,
+      &__ticket-type {
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 1.17em;
+        color:#030303;
+        margin-bottom: 5px;
+      }
+
+      &__icon {
+        width: 15px;
+        height: 15px;
+        margin-right: 10px;
+      }
+
+      &__summ {
+        margin-top: 25px;
+
+        .horizontal-line {
+          margin-bottom: 10px;
+        }
+      }
+
+      &__count {
+        margin-bottom: 5px;
+
+        .num-of-tickets {
+          display: flex;
+          justify-content: space-between;
+          font-size: 22px;
+          line-height: 1.17em;
+          font-weight: 400;
+        }
+
+        .tickets-count {
+          display: inline-block;
+          width: 32px;
+          height: 20px;
+          margin-right: 10px;
+          border-radius: 5px;
+          background: #030303;
+          text-align: center;
+          font-size: 18px;
+          font-weight: 400;
+          color: #a4a4a3;
+        }
+      }
+
+      &__total {
+        display: flex;
+        justify-content: space-between;
+        font-size: 32px;
+        line-height: 1.17em;
+        font-weight: 400;
+        color: #030303;
+      }
+    }
+  }
+
+  &__card {
+    margin-top: 10px;
+  }
+
+  &__submit {
+    position: absolute;
+    bottom: 26px;
+    right: 30px;
+    width: 220px;
+    height: 45px;
+    background: #710707;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 1.17em;
+    color: #fff;
+  }
+}
+
+@media (max-width: 1000px) {
+  .form-buy {
+    // align-items: flex-start;
+    &__wrapper {
+      flex-direction: column;
+    }
+
+    form {
+      max-width: 590px;
+    }
+
+    &__data,
+    &__overview {
+      max-width: 100%;
+    }
+
+    &__overview {
+      height: 665px;
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .form-buy {
+    form {
+      margin: 0;
+    }
+    .section-header {
+      font-size: 32px;
+    }
+
+    &__overview {
+      height: 885px;
+      padding: 15px;
+      > img {
+        width: 120px;
+        height: 96px;
+        right: 15px;
+      }
+    }
+  }
+}
+@media (max-height: 845px) or (max-width: 1000px) {
+  .form-buy {
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 376px) {
+  .form-buy {
+    &__overview {
+      > img {
+        width: 70px;
+        height: 58px;
+      }
+    }
+
+    &__tickets-count-number {
+      p {
+        font-size: 16px;
+      }
+    }
+  }
+}

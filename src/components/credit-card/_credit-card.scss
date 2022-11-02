@@ -138,9 +138,10 @@
   }
 }
 
-@media (max-width: 420px) {
+@media (max-width: 600px) {
   .credit-card {
     max-width: 330px;
+    margin: 0 auto;
 
     &__front,
     &__back {
@@ -164,6 +165,19 @@
 
     input {
       font-size: 13px;
+    }
+  }
+}
+
+@media (max-width: 405px) {
+  .credit-card {
+    &__type {
+      display: none;
+    }
+
+    &__number,
+    &__expiration {
+      max-width: 100%;
     }
   }
 }

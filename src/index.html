@@ -161,11 +161,11 @@
                   <h4>Ticket Type</h4>
                   <div class="buy-tickets__buttons">
                     @@include('./components/radio-button/_radio-button.html', {ticketType:
-                    'permanent-exhibition', text: 'Permanent exhibition', priceBasic: '120', priceSenior: '100'})
+                    'permanent-exhibition', text: 'Permanent exhibition', priceBasic: '20', priceSenior: '10'})
                     @@include('./components/radio-button/_radio-button.html', {ticketType:
-                    'temporary-exhibition', text: 'Temporary exhibition', priceBasic: '70', priceSenior: '50'})
+                    'temporary-exhibition', text: 'Temporary exhibition', priceBasic: '10', priceSenior: '5'})
                     @@include('./components/radio-button/_radio-button.html', {ticketType:
-                    'combined-admission', text: 'Combined Admission', priceBasic: '170', priceSenior: '150'})
+                    'combined-admission', text: 'Combined Admission', priceBasic: '25', priceSenior: '15'})
                   </div>
                 </div>
                 <div class="buy-tickets__amount">
@@ -281,6 +281,103 @@
         </div>
       </div>
     </footer>
+    <div class="form-buy">
+      <form>
+        <div class="form-buy__close"><span></span></div>
+        <div class="form-buy__wrapper">
+          <div class="form-buy__data">
+            <div class="form-buy__logo">
+              <img src="./img/icons/icons.svg#logo-gold" alt="logo">
+            </div>
+            @@include('components/section-header/_section-header.html',
+            {className: 'section-header--gold', text: 'Booking Tickets'})
+            <h4 class="form-buy__subheader">Tour to Louvre</h4>
+            <hr class="horizontal-line" />
+            <div class="form-buy__date-time">
+              @@include('./components/datepicker/_datepicker.html', {iconSrc:
+              './img/icons/icons.svg#date', toggleSrc: './img/icons/icons.svg#arrow'})
+              @@include('./components/timepicker/_timepicker.html', {iconSrc:
+              './img/icons/icons.svg#time', toggleSrc: './img/icons/icons.svg#arrow'})
+            </div>
+            <div class="form-buy__name">
+              @@include('./components/input/_input.html', {imgSrc:
+              './img/icons/icons.svg#name', placeholder: 'Name', type: 'text', id:
+              'name'})
+            </div>
+            <div class="form-buy__email">
+              @@include('./components/input/_input.html', {imgSrc:
+              './img/icons/icons.svg#email', placeholder: 'E-mail', type: 'email', id:
+              'email'})
+            </div>
+            <div class="form-buy__phone">
+              @@include('./components/input/_input.html', {imgSrc:
+              './img/icons/icons.svg#tel', placeholder: 'Phone', type: 'tel', id:
+              'tel'})
+            </div>
+            <div class="form-buy__ticket-type">
+              @@include('./components/dropdown/_dropdown.html', {imgSrc:
+              './img/icons/icons.svg#ticket-type', toggleSrc:
+              './img/icons/icons.svg#arrow'})
+            </div>
+            <div class="form-buy__tickets-count">
+              <h5 class="form-buy__tickets-count-header">Entry Ticket</h5>
+              <hr class="horizontal-line" />
+              <div class="form-buy__tickets-count-number">
+                <p>Basic 18+ (<span class="basic-price">20</span> €)</p>
+                <div class="form-buy__tickets-count-select">
+                  @@include('components/button/_button.html', {className: "button--calc-amount button--subtract",
+                  type: "button", text: "-"})
+                  <input type="number" min="0" max="20" value="2" name="" id="count-basic" onKeyDown="return false">
+                  @@include('components/button/_button.html', {className: "button--calc-amount button--add",
+                  type: "button", text: "+"})
+                </div>
+              </div>
+              <div class="form-buy__tickets-count-number">
+                <p>Senior 65+ (<span class="senior-price">10</span> €)</p>
+                <div class="form-buy__tickets-count-select">
+                  @@include('components/button/_button.html', {className: "button--calc-amount button--subtract",
+                  type: "button", text: "-"})
+                  <input type="number" min="0" max="20" value="2" name="" id="count-senior" onKeyDown="return false">
+                  @@include('components/button/_button.html', {className: "button--calc-amount button--add",
+                  type: "button", text: "+"})
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-buy__overview">
+            <img src="./img/overview-img.jpg" alt="overview">
+            <h3>Overview</h3>
+            <h5>Tour to Louvre</h5>
+            <div class="overview__date">
+              <img src="./img/icons/icons.svg#date" alt="icon" class="overview__icon">
+              Friday, August 19
+            </div>
+            <div class="overview__time">
+              <img src="./img/icons/icons.svg#time" alt="icon" class="overview__icon">
+              16 : 30
+            </div>
+            <div class="overview__ticket-type">
+              <img src="./img/icons/icons.svg#check-circle" alt="icon" class="overview__icon">
+              Temporary exhibition
+            </div>
+            <div class="overview__summ">
+              <div class="overview__count">
+                <div class="num-of-tickets"><div><span class="tickets-count">2</span>Basic (<span class="basic-price">20</span> €)</div><div><span>40</span>€</div></div>
+              </div>
+              <div class="overview__count">
+                <div class="num-of-tickets"><div><span class="tickets-count">2</span>Senior (<span class="senior-price">10</span> €)</div><div><span>20</span>€</div></div>
+              </div>
+              <hr class="horizontal-line">
+              <div class="overview__total">Total: <span>60 €</span></div>
+            </div>
+            <div class="form-buy__card">
+              @@include('./components/credit-card/_credit-card.html', {})
+            </div>
+            <button class="form-buy__submit" type="submit">Book</button>
+          </div>
+        </div>
+      </form>
+    </div>
     <!-- @@include('./components/dropdown/_dropdown.html', {imgSrc:
     './img/icons/icons.svg#ticket-type', toggleSrc:
     './img/icons/icons.svg#arrow'})
