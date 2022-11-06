@@ -2,32 +2,6 @@
 <html lang="en">
   @@include('html/head.html', {title: "Louvre Museum"})
   <body>
-    <!-- @@include('components/button/_button.html', {className: "button--book",
-    type: "button", text: "Book"}) -->
-    <!-- @@include('components/section-header/_section-header.html', {className:
-    'section-header--gold', text: 'Picture explore'}) -->
-    <!-- @@include -->
-    <!-- @@include('components/link/_link-nav.html', {className: 'link--discover',
-    text: 'Discover the Louvre', href: '#'}) -->
-    <!-- @@include('components/link/_link-nav.html', {className: 'link--nav', text:
-    'Visiting', href: '#visiting'}) -->
-    <!-- @@include('components/link/_link-social.html', {className: 'link--social',
-    href: 'https://www.youtube.com/user/louvre', imgSrc:
-    './img/icons/icons.svg#youtube'}) -->
-    <!-- @@include('./components/logo/_logo.html', {text: 'louvre', imgSrc:
-    './img/icons/icons.svg#site-logo'}) -->
-    <!-- @@include('./components/radio-button/_radio-button.html', {ticketType:
-    'permanent-exhibition', text: 'Permanent exhibition', checked: 'checked'})
-    @@include('./components/radio-button/_radio-button.html', {ticketType:
-    'temprorary-exhibition', text: 'Temporary exhibition'})
-    @@include('./components/radio-button/_radio-button.html', {ticketType:
-    'combined-admission', text: 'Combined Admission'}) -->
-    <!-- @@include('./components/input/_input.html', {imgSrc:
-    './img/icons/icons.svg#name', placeholder: 'Name', type: 'text', id:
-    'name'}) @@include('./components/input/_input.html', {imgSrc:
-    './img/icons/icons.svg#email', placeholder: 'E-mail', type: 'email', id:
-    'email'}) @@include('./components/input/_input.html', {imgSrc:
-    './img/icons/icons.svg#tel', placeholder: 'Phone', type: 'tel', id: 'tel'}) -->
     <header class="section--dark">
       <div class="header container container--header">
         @@include('./components/logo/_logo.html', {text: 'louvre', imgSrc:
@@ -54,7 +28,7 @@
           </div>
         </div>
       </section>
-      <section class="virtual-tour">
+      <section id="visiting" class="virtual-tour">
         <div class="container">
           <div class="virtual-tour__wrapper">
             <div class="virtual-tour__content">
@@ -97,7 +71,7 @@
           </div>
         </div>
       </section>
-      <section class="explore section--dark">
+      <section id="explore" class="explore section--dark">
         <div class="container">
           <div class="explore__wrapper">
             <div class="explore__content">
@@ -114,7 +88,7 @@
           </div>
         </div>
       </section>
-      <section class="video">
+      <section id="video" class="video">
         <div class="container">
           <div class="video__wrapper">
             <div class="video__content">
@@ -132,7 +106,7 @@
           </div>
         </div>
       </section>
-      <section class="gallery-section section--dark">
+      <section id="gallery" class="gallery-section section--dark">
         <div class="container">
           <div class="gallery-section__wrapper">
             <div class="gallery-section__content">
@@ -145,7 +119,7 @@
           </div>
         </div>
       </section>
-      <section class="buy-tickets">
+      <section id="tickets" class="buy-tickets">
         <div class="container">
           <div class="buy-tickets__wrapper">
             <div class="buy-tickets__content">
@@ -196,7 +170,7 @@
         </div>
       </section>
       @@include('./components/parallax/_parallax.html', {})
-      <section class="contacts">
+      <section id="contacts" class="contacts">
         <div class="container">
           <div class="contacts__wrapper">
             @@include('components/section-header/_section-header.html',
@@ -378,22 +352,5 @@
         </div>
       </form>
     </div>
-    <!-- @@include('./components/dropdown/_dropdown.html', {imgSrc:
-    './img/icons/icons.svg#ticket-type', toggleSrc:
-    './img/icons/icons.svg#arrow'})
-    @@include('./components/datepicker/_datepicker.html', {iconSrc:
-    './img/icons/icons.svg#date', toggleSrc: './img/icons/icons.svg#arrow'})
-    @@include('./components/timepicker/_timepicker.html', {iconSrc:
-    './img/icons/icons.svg#time', toggleSrc: './img/icons/icons.svg#arrow'})
-    @@include('./components/tour-card/_tour-card.html', {imgSrc:
-    '../img/virtual-tour/virtual-tour1.jpg', header: 'royal palace', link: '#'})
-    @@include('./components/comparison-slider/_comparison-slider.html', {})
-    @@include('./components/parallax/_parallax.html', {})
-    @@include('./components/gallery/_gallery.html', {})
-    @@include('./components/map/_map.html', {})
-    @@include('./components/slider-main/_slider-main.html', {})
-    @@include('./components/video-player/_video-player.html', {})
-    @@include('./components/slider-video/_slider-video.html', {})
-    @@include('./components/credit-card/_credit-card.html', {}) -->
   </body>
 </html>
