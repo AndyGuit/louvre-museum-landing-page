@@ -1,3 +1,5 @@
+import { ticketForm } from '../../js/classes/ticket-form.js';
+
 const options = {
   enableTime: true,
   noCalendar: true,
@@ -10,8 +12,10 @@ const options = {
   onValueUpdate(selectedDates, dateString, instance) {
     instance.input.querySelector('input').value = dateString;
 
-    // TODO
-    // send dateString to ticket form
+    instance.element.classList.remove('invalid');
+
+    ticketForm.setTicketTime(selectedDates);
+    ticketForm.displayTimeOverview(dateString);
   }
 };
 

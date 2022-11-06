@@ -1,8 +1,12 @@
+import { ticketForm } from './ticket-form.js';
+
 class TicketsSectionCalculator {
   constructor(container) {
     this.container = document.querySelector(container);
 
     this.ticketsPrice = {
+      ticketTypeValue: null,
+      ticketTypeText: null,
       ticketBasicPrice: null,
       ticketSeniorPrice: null,
       ticketBasicCount: null,
@@ -53,12 +57,21 @@ class TicketsSectionCalculator {
       })
     })
 
-    this.buyNowBtn.addEventListener('click', this.buttonRippleEffect);
+    this.buyNowBtn.addEventListener('click', (e) => {
+      this.buttonRippleEffect(e);
+      ticketForm.setTicketsFromBuy(this.ticketsPrice);
+
+      // Show form
+      const form = document.querySelector('.form-buy');
+      form.classList.add('active');
+    });
   }
 
   setPriceData = () => {
     this.ticketTypes.forEach(input => {
       if (input.checked) {
+        this.ticketsPrice.ticketTypeValue = input.id;
+        this.ticketsPrice.ticketTypeText = input.closest('label').textContent.trim();
         this.ticketsPrice.ticketBasicPrice = +input.dataset.priceBasic;
         this.ticketsPrice.ticketSeniorPrice = +input.dataset.priceSenior;
       }

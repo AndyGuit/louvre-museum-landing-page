@@ -1,3 +1,5 @@
+import { ticketForm } from '../../js/classes/ticket-form.js';
+
 const options = {
   dateFormat: 'l, F d',
   minDate: 'today',
@@ -10,8 +12,10 @@ const options = {
 
     instance.input.querySelector('input').value = formatedDate;
 
-    // TODO:
-    // send dateString to ticket form
+    instance.element.classList.remove('invalid');
+
+    ticketForm.setTicketDate(selectedDates);
+    ticketForm.displayDateOverview(dateString);
   },
   "disable": [
     function(date) {
@@ -21,7 +25,7 @@ const options = {
   ],
 };
 
-const datepickerEl =  document.querySelector('.datepicker');
+const datepickerEl = document.querySelector('.datepicker');
 
 export const datepicker = flatpickr(datepickerEl, options);
 

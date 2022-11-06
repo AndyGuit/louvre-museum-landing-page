@@ -13,7 +13,6 @@ import { datepicker } from '../components/datepicker/_datepicker.js';
 import { timepicker } from '../components/timepicker/_timepicker.js';
 import { dropdown } from '../components/dropdown/_dropdown.js';
 import { creditCard } from '../components/credit-card/_credit-card.js';
-
-
+import { ticketForm } from './classes/ticket-form.js';
 
 flsFunctions.isWebp();

@@ -1,3 +1,5 @@
+import { ticketForm } from '../../js/classes/ticket-form.js';
+
 class CreditCardValidation {
   #creditCardData;
 
@@ -86,11 +88,13 @@ class CreditCardValidation {
 
     const regex = /[a-zA-Z][a-zA-Z ]{2,}/;
 
-    value.match(regex)
-      ? this.name.classList.add('valid')
-      : this.name.classList.add('invalid');
+    if (value.match(regex)) {
+      this.name.classList.add('valid');
 
-    this.#creditCardData.cardholderName = value;
+      this.#creditCardData.cardholderName = value;
+    } else {
+      this.name.classList.add('invalid');
+    }
   }
 
   cvvValidation = (e) => {
@@ -103,11 +107,13 @@ class CreditCardValidation {
 
     const regex = /^[0-9]+$/;
 
-    value.match(regex)
-      ? this.cvv.classList.add('valid')
-      : this.cvv.classList.add('invalid');
+    if (value.match(regex)) {
+      this.cvv.classList.add('valid')
 
-    this.#creditCardData.cvv = value;
+      this.#creditCardData.cvv = value;
+    } else {
+      this.cvv.classList.add('invalid');
+    }
   }
 
   expirationDateValidation = () => {
@@ -129,6 +135,23 @@ class CreditCardValidation {
 
     this.#creditCardData.expirationDate.month = month;
     this.#creditCardData.expirationDate.year = year;
+  }
+
+  validateCard = () => {
+    const inputs = Array.from(this.container.querySelectorAll('input'));
+
+    const allValid = inputs.every(el => el.classList.contains('valid'));
+
+    if (allValid) {
+      ticketForm.setCreditCardData(this.#creditCardData);
+      return true;
+    } else {
+      inputs.forEach(input => {
+        if (!input.classList.contains('valid')) {
+          input.classList.add('invalid');
+        }
+      })
+    }
   }
 }
 
