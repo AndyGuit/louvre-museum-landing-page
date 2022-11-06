@@ -55,9 +55,9 @@ class VideoPlayer {
   }
 
   togglePlay = () => {
+    this.video.paused ? this.video.play() : this.video.pause();
     this.toggleMainPlayBtn();
     this.togglePlayBtn();
-    this.video.paused ? this.video.play() : this.video.pause();
   }
 
   toggleMute = () => {
@@ -83,8 +83,8 @@ class VideoPlayer {
 
   toggleMainPlayBtn = () => {
     this.video.paused
-      ? this.mainPlay.classList.add('disabled')
-      : this.mainPlay.classList.remove('disabled');
+      ? this.mainPlay.classList.remove('disabled')
+      : this.mainPlay.classList.add('disabled');
   }
 
   toggleVideoProgress = (e) => {
@@ -123,6 +123,9 @@ class VideoPlayer {
     this.video.src = `./files/video/video${index}.mp4`;
     this.video.poster = `./img/video-posters/poster${index}.jpg`;
     this.videoBar.value = 0;
+
+    this.toggleMainPlayBtn();
+    this.togglePlayBtn();
   }
 }
 
