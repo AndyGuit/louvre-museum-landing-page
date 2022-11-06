@@ -12,6 +12,9 @@ class VideoPlayer {
 
     this.volumeBar = this.container.querySelector('input.volume');
 
+    // set default volume to 50%
+    this.video.volume = 0.5;
+
     this.fullscreenBtn = this.container.querySelector('button.fullscreen');
 
     this.handleEvents();
@@ -114,6 +117,12 @@ class VideoPlayer {
 
     progressBar.style.setProperty(propVar, `${percentage}%`);
     progressBar.style.background = `linear-gradient(to right, #710707 0%, #710707 ${percentage}%, #c4c4c4 ${percentage}%, #c4c4c4 100%)`;
+  }
+
+  changeActiveVideo = (index) => {
+    this.video.src = `./files/video/video${index}.mp4`;
+    this.video.poster = `./img/video-posters/poster${index}.jpg`;
+    this.videoBar.value = 0;
   }
 }
 

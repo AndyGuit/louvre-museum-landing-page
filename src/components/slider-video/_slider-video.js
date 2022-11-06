@@ -1,4 +1,5 @@
 import Swiper, { Navigation, Pagination } from 'swiper';
+import { videoPlayer } from '../video-player/_video-player.js';
 
 const optionsVideo = {
   modules: [Navigation, Pagination],
@@ -31,6 +32,12 @@ const optionsVideo = {
     el: '.slider-video__pagination',
     clickable: true,
   },
+
+  on: {
+    slideChange: function (swiper) {
+      videoPlayer.changeActiveVideo(swiper.realIndex);
+    }
+  }
 };
 
 export const sliderVideo = new Swiper('.slider-video', optionsVideo);
