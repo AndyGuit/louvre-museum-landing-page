@@ -36,11 +36,8 @@ class VideoPlayer {
 
     // Show play btn when video ended
     this.video.addEventListener('ended', () => {
-      this.mainPlay.classList.remove('disabled');
-      const btnImg = this.playBtn.querySelector('img');
-      const iconPath = btnImg.src.substring(0, btnImg.src.indexOf('#video'));
-
-      btnImg.src = iconPath + '#video-play';
+      this.toggleMainPlayBtn();
+      this.togglePlayBtn();
     })
 
     // Changing video current time
@@ -68,7 +65,7 @@ class VideoPlayer {
   togglePlayBtn = () => {
     const btnImg = this.playBtn.querySelector('img');
     const iconPath = btnImg.src.substring(0, btnImg.src.indexOf('#video'));
-    const plural = this.video.paused ? '#video-pause' : '#video-play';
+    const plural = this.video.paused ? '#video-play' : '#video-pause';
 
     btnImg.src = iconPath + plural;
   }
