@@ -76,9 +76,7 @@ class TicketsSectionCalculator {
     if (data) {
       this.ticketsPrice = data;
 
-      this.ticketTypes.forEach(type => {
-        if (type.id === this.ticketsPrice.ticketTypeValue) type.checked = true;
-      });
+      this.container.querySelector(`#${this.ticketsPrice.ticketTypeValue}`).checked = true;
 
       this.amountBasic.value = this.ticketsPrice.ticketBasicCount;
       this.amountSenior.value = this.ticketsPrice.ticketSeniorCount;
