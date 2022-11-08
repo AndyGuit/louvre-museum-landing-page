@@ -9,6 +9,7 @@ const options = {
   defaultDate: 'now',
   time_24hr: true,
   minuteIncrement: 30,
+  disableMobile: true,
   onValueUpdate(selectedDates, dateString, instance) {
     instance.input.querySelector('input').value = dateString;
 

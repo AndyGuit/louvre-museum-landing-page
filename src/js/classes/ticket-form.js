@@ -109,6 +109,7 @@ class TicketForm {
       if (allInputs.every(el => el)) {
         this.container.classList.remove('active');
         this.clearForm();
+        localStorage.removeItem('MuseumTickets');
 
         // send ticket data to server
         console.log(this.ticketData);
