@@ -19,15 +19,15 @@ class TicketsSectionCalculator {
     this.addTicketBtns = this.container.querySelectorAll('.button--add');
     this.subtractTicketBtns = this.container.querySelectorAll('.button--subtract');
 
+    this.amountBasic = this.container.querySelector('#amount-basic');
+    this.amountSenior = this.container.querySelector('#amount-senior');
+
     this.totalPriceEl = this.container.querySelector('.buy-tickets__total-sum span');
 
     this.buyNowBtn = this.container.querySelector('.button--buy-now');
 
-    // set default checked input
-    this.ticketTypes[0].checked = true;
-
     this.handleEvents();
-    this.setPriceData();
+    this.getTicketData();
     this.calculateTotalPrice();
   }
 
@@ -38,6 +38,7 @@ class TicketsSectionCalculator {
 
         this.setPriceData();
         this.calculateTotalPrice();
+        this.setLocalStorage();
       })
     })
 
@@ -47,6 +48,7 @@ class TicketsSectionCalculator {
 
         this.setPriceData();
         this.calculateTotalPrice();
+        this.setLocalStorage();
       })
     })
 
@@ -54,6 +56,7 @@ class TicketsSectionCalculator {
       input.addEventListener('change', () => {
         this.setPriceData();
         this.calculateTotalPrice();
+        this.setLocalStorage();
       })
     })
 
@@ -67,6 +70,32 @@ class TicketsSectionCalculator {
     });
   }
 
+  getTicketData = () => {
+    const data = JSON.parse(localStorage.getItem('MuseumTickets'));
+
+    if (data) {
+      this.ticketsPrice = data;
+
+      this.ticketTypes.forEach(type => {
+        if (type.id === this.ticketsPrice.ticketTypeValue) type.checked = true;
+      });
+
+      this.amountBasic.value = this.ticketsPrice.ticketBasicCount;
+      this.amountSenior.value = this.ticketsPrice.ticketSeniorCount;
+
+      this.setPriceData();
+    } else {
+      // set default checked input
+      this.ticketTypes[0].checked = true;
+      this.setPriceData();
+      this.setLocalStorage();
+    }
+  }
+
+  setLocalStorage = () => {
+    localStorage.setItem('MuseumTickets', JSON.stringify(this.ticketsPrice));
+  }
+
   setPriceData = () => {
     this.ticketTypes.forEach(input => {
       if (input.checked) {
@@ -77,11 +106,8 @@ class TicketsSectionCalculator {
       }
     });
 
-    const amountBasic = this.container.querySelector('#amount-basic').value;
-    const amountSenior = this.container.querySelector('#amount-senior').value;
-
-    this.ticketsPrice.ticketBasicCount = +amountBasic;
-    this.ticketsPrice.ticketSeniorCount = +amountSenior;
+    this.ticketsPrice.ticketBasicCount = +this.amountBasic.value;
+    this.ticketsPrice.ticketSeniorCount = +this.amountSenior.value;
   }
 
   calculateTotalPrice = () => {
